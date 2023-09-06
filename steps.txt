@@ -1,0 +1,20 @@
+creating the blog app
+
+adding revalidation
+(https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating
+https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config)
+
+Interval Revalidation
+revalidation config can only be place in page.tsx layout.tsx or route.tsx
+setting up revalidation app/posts/page.tsx
+revalidation can only be tested in build. Running npm run build, npm run start
+creating new.md blogpost to test 
+
+On-demand Revalidation
+(https://nextjs.org/docs/app/api-reference/functions/revalidateTag
+https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#on-demand-revalidation)
+
+you can revalidated data based on Tag or on Path of the endpoint app/api/revalidate/route.ts
+
+you can't test it with npm run dev. npm run build -> npm start
+testing Insomnia http://localhost:3000/api/revalidate?path=/&secret=DaveGrayTeachesCode (comment app/page.tsx revalidation interval for testing)
